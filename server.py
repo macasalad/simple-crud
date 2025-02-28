@@ -9,7 +9,7 @@ c = db.cursor()
 
 create_db = "CREATE DATABASE IF NOT EXISTS student_db"
 c.execute(create_db)
-db.close()
+c.close()
 
 db = mysql.connector.connect(
     host = "localhost",
@@ -18,4 +18,3 @@ db = mysql.connector.connect(
     database = "student_db"
 )
 c = db.cursor()
-db.close()
